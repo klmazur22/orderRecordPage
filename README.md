@@ -23,3 +23,6 @@ Choose any Product -> Next -> Quantity = 1 -> Save. In this way Pricebook is ass
 Refresh the page.
 
 From this moment, components are ready to be tested!
+
+## External System URL (requestcatcher)
+https://order-confirmation-external-system.requestcatcher.com
