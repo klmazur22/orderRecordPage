@@ -18,8 +18,8 @@ When the Order record page is opened, you will see a warning that there no odera
 
 Near the Order products, click on "Add Products".
 
-Choose a Pricebook, then click "Cancel".
+Choose any Product -> Next -> Quantity = 1 -> Save. In this way Pricebook is assigned. Then you will be able to remove an item added to the order.
 
 Refresh the page.
 
-Now you are ready to test!
+From this moment, components are ready to be tested!
