@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="My Order" icon-name="standard:webcart">
+        <template if:true={products.length}>
+        <lightning-datatable
+            key-field="Id"
+            data={products}
+            columns={columns}
+            show-row-number-column
+            row-number-offset={rowOffset}
+            hide-checkbox-column
+            onrowaction={handleQuantityChange}
+        >
+        </lightning-datatable>
+            <lightning-button variant="brand" label="Confirm" title="Confirm Request in External System" 
+                          onclick={handleConfirm} class="slds-align_absolute-center slds-p-top_small" disabled={disableButtons}></lightning-button>
+        </template>
+    </lightning-card>
+</template>

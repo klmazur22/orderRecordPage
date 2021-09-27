@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <masterLabel>ItemAdded</masterLabel>
+    <isExposed>true</isExposed>
+    <description>LMC used to notify other components that an item was added to order from Product List LWC</description>
+</LightningMessageChannel>

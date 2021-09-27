@@ -1,0 +1,48 @@
+<template>
+    <lightning-card title="Products" icon-name="standard:fulfillment_order">
+        <template if:true={products.length}>
+            <lightning-datatable
+                key-field="Id"
+                data={pagedData}
+                columns={columns}
+                show-row-number-column
+                row-number-offset={rowOffset}
+                hide-checkbox-column
+                onrowaction={handleAddProduct}
+            >
+            </lightning-datatable>
+            
+            <template if:true={loading}>
+                <lightning-dynamic-icon
+                    type="ellie"
+                    alternative-text="Data is loading."
+                    option="3">
+                </lightning-dynamic-icon>Loading...
+            </template>
+
+            <div class="slds-var-p-top_small slds-align_absolute-center">
+                <lightning-button 
+                    name="buttonBackwards" 
+                    label="" 
+                    title="" 
+                    icon-name="utility:back" 
+                    onclick={handleButtonPrevious}  
+                    class="slds-var-m-left_x-small" 
+                    disabled={disabledPreviousButton}>
+                </lightning-button>
+
+                &nbsp;&nbsp;{currentPage}/{maxPages}
+
+                <lightning-button 
+                    name="buttonForwards" 
+                    label="" 
+                    title="" 
+                    icon-name="utility:forward" 
+                    onclick={handleButtonNext} 
+                    class="slds-var-m-left_x-small" 
+                    disabled={disabledNextButton}>
+                </lightning-button>
+            </div>
+        </template>
+    </lightning-card>
+</template>
